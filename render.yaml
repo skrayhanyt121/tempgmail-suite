@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: tempgmail-suite
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn web_app:app --bind 0.0.0.0:$PORT --workers 2 --threads 4 --timeout 120
+    envVars:
+      - key: TEMPGMAIL_PORT
+        fromService:
+          type: web
+          name: tempgmail-suite
+          property: port
+      - key: FB_VERIFY_TOKEN
+        value: tempgmail_verify_token_2026
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: FB_PAGE_ACCESS_TOKEN
+        sync: false
