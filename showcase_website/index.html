@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>NovaPulse // Cyber AI Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient Animated Background Canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="brand">
+        <span class="brand-glyph">✦</span>
+        <span class="brand-name">NovaPulse<span class="accent-dot">.</span>io</span>
+      </div>
+      <div class="nav-status">
+        <span class="status-indicator"></span>
+        <span class="status-label">Cluster Live</span>
+      </div>
+      <button id="theme-toggle" class="btn-icon" aria-label="Toggle Theme">
+        <span class="theme-icon">◐</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="badge-pill">
+        <span class="badge-spark">⚡</span>
+        <span>Next-Gen Autonomous Agentic Web</span>
+      </div>
+      <h1 class="hero-title">
+        Building Intelligent Systems <br>
+        <span class="gradient-text">Beyond Boundaries</span>
+      </h1>
+      <p class="hero-subtitle">
+        A real-time reactive showcase crafted from scratch using HTML5, CSS Glassmorphism, 
+        and high-frequency JavaScript canvas mechanics.
+      </p>
+      <div class="hero-actions">
+        <a href="#terminal-section" class="btn btn-primary">
+          <span>Launch Terminal</span>
+          <span class="btn-arrow">→</span>
+        </a>
+        <button id="btn-ping" class="btn btn-secondary">
+          <span id="ping-icon">📡</span>
+          <span id="ping-text">Test Latency</span>
+        </button>
+      </div>
+
+      <!-- Live Metric Strip -->
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <span class="metric-val" data-target="99.98">0</span><span class="metric-unit">%</span>
+          <span class="metric-lbl">Uptime Reliability</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-val" data-target="14">0</span><span class="metric-unit">ms</span>
+          <span class="metric-lbl">API Response Time</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-val" data-target="39">0</span><span class="metric-unit">+</span>
+          <span class="metric-lbl">Hermes Skills Loaded</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive In-Browser Terminal -->
+    <section id="terminal-section" class="terminal-section">
+      <div class="section-header">
+        <span class="section-tag">Direct Shell Access</span>
+        <h2 class="section-title">Interactive Cloud Terminal</h2>
+        <p class="section-desc">Type commands directly to interact with this web instance in real-time.</p>
+      </div>
+
+      <div class="terminal-box">
+        <div class="terminal-bar">
+          <div class="terminal-dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <span class="terminal-title">guest@novapulse-core:~ (zsh)</span>
+          <span class="terminal-pill">Live Shell</span>
+        </div>
+        <div id="terminal-output" class="terminal-output">
+          <div class="term-line welcome">
+            Welcome to <span class="term-cyan">NovaPulse Core CLI v2.4</span>. Type <span class="term-yellow">'help'</span> to view available commands.
+          </div>
+        </div>
+        <div class="terminal-input-row">
+          <span class="term-prompt">novapulse ❯</span>
+          <input type="text" id="term-input" autocomplete="off" spellcheck="false" placeholder="type 'help', 'status', 'skills', or 'clear'...">
+          <button id="term-send-btn" class="term-submit">Run</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Capabilities Cards -->
+    <section class="features-section">
+      <div class="section-header">
+        <span class="section-tag">Architecture</span>
+        <h2 class="section-title">Engineered For High Velocity</h2>
+      </div>
+
+      <div class="cards-grid">
+        <div class="glass-card">
+          <div class="card-icon">⚡</div>
+          <h3 class="card-title">Zero Dependency Core</h3>
+          <p class="card-body">Pure Vanilla ES6+ and native modern CSS3. No bloated external libraries, guaranteeing sub-50ms paint times.</p>
+          <div class="card-badge">Instant Load</div>
+        </div>
+
+        <div class="glass-card highlight">
+          <div class="card-icon">🤖</div>
+          <h3 class="card-title">Hermes Agent Bridge</h3>
+          <p class="card-body">Integrated with Nous Research autonomous reasoning workflows, multi-turn context retention, and automated execution.</p>
+          <div class="card-badge active">Autonomous</div>
+        </div>
+
+        <div class="glass-card">
+          <div class="card-icon">🛡️</div>
+          <h3 class="card-title">Bulletproof Sandboxing</h3>
+          <p class="card-body">Hardened state handling, strict input sanitization, and localized session isolation across mobile and desktop devices.</p>
+          <div class="card-badge">Secure</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>© 2026 NovaPulse Studio • Handcrafted with Precision on Linux</p>
+      <div class="footer-links">
+        <span class="badge-status">Running on localhost:8080</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus AI Studio | 2026 Creative Suite</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body class="dark-theme">
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i data-lucide="sparkles" class="logo-icon"></i>
+                <span>Nexus</span>
+            </div>
+            <nav class="nav-links">
+                <a href="#" class="nav-item active"><i data-lucide="layout-grid"></i> Studio</a>
+                <a href="#" class="nav-item"><i data-lucide="image"></i> Gallery</a>
+                <a href="#" class="nav-item"><i data-lucide="layers"></i> Models</a>
+                <a href="#" class="nav-item"><i data-lucide="history"></i> History</a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <div class="avatar">M</div>
+                    <div class="user-info">
+                        <span class="user-name">Mamun</span>
+                        <span class="user-plan">Pro Plan</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Workspace -->
+        <main class="workspace">
+            <header class="workspace-header">
+                <h1>AI Studio</h1>
+                <div class="header-actions">
+                    <button class="btn btn-secondary"><i data-lucide="share-2"></i> Share</button>
+                    <button class="btn btn-primary">Upgrade</button>
+                </div>
+            </header>
+
+            <div class="bento-grid">
+                <!-- Workbench Section -->
+                <section class="bento-item workbench col-span-2 row-span-2">
+                    <div class="item-header">
+                        <i data-lucide="terminal"></i>
+                        <span>Prompt Workbench</span>
+                    </div>
+                    <div class="prompt-input-container">
+                        <textarea id="promptInput" placeholder="Describe the masterpiece in your mind..."></textarea>
+                        <div class="prompt-controls">
+                            <div class="selectors">
+                                <button class="style-chip active" data-style="cinematic">Cinematic</button>
+                                <button class="style-chip" data-style="anime">Anime</button>
+                                <button class="style-chip" data-style="photorealistic">Realism</button>
+                                <button class="style-chip" data-style="3d-render">3D Render</button>
+                            </div>
+                            <button id="generateBtn" class="btn btn-generate">
+                                <span>Generate</span>
+                                <i data-lucide="zap"></i>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Style Configuration -->
+                <section class="bento-item config">
+                    <div class="item-header">
+                        <i data-lucide="sliders"></i>
+                        <span>Parameters</span>
+                    </div>
+                    <div class="params-list">
+                        <div class="param-row">
+                            <span>Aspect Ratio</span>
+                            <select>
+                                <option>16:9</option>
+                                <option>1:1</option>
+                                <option>4:5</option>
+                            </select>
+                        </div>
+                        <div class="param-row">
+                            <span>Guidance</span>
+                            <input type="range" min="1" max="20" value="7">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Model Selection -->
+                <section class="bento-item model-card">
+                    <div class="item-header">
+                        <i data-lucide="cpu"></i>
+                        <span>Model</span>
+                    </div>
+                    <div class="model-info">
+                        <div class="model-tag">Stable Diffusion XL 3.0</div>
+                        <p>Optimized for photorealism and spatial awareness.</p>
+                    </div>
+                </section>
+
+                <!-- Dynamic Gallery -->
+                <section class="bento-item gallery-section col-span-3">
+                    <div class="item-header">
+                        <i data-lucide="image"></i>
+                        <span>Recent Creations</span>
+                        <div class="gallery-filters">
+                            <span class="active">All</span>
+                            <span>Favorites</span>
+                        </div>
+                    </div>
+                    <div id="galleryGrid" class="gallery-inner-grid">
+                        <!-- Items populated by JS -->
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

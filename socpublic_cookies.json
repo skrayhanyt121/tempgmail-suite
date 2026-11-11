@@ -1,0 +1,18 @@
+[
+  {
+    "name": "session_id",
+    "value": "bc6c9924-63ba-464b-8878-b8a47323b659"
+  },
+  {
+    "name": "secret",
+    "value": "23FFFE26-6181-25F2-B844-53091C28EBDD"
+  },
+  {
+    "name": "user_data",
+    "value": "%7B%22captcha_type%22%3A%22Turnstile%22%7D"
+  },
+  {
+    "name": "mdd",
+    "value": "0"
+  }
+]

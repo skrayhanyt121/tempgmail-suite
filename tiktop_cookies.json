@@ -1,0 +1,38 @@
+[
+    {
+        "name": "mdd",
+        "value": "0",
+        "domain": ".tiktop-free.com",
+        "path": "/"
+    },
+    {
+        "name": "_ym_isad",
+        "value": "2",
+        "domain": ".tiktop-free.com",
+        "path": "/"
+    },
+    {
+        "name": "PHPSESSID",
+        "value": "c2be870bfcf6f656543cf538f4e16e6c",
+        "domain": "tiktop-free.com",
+        "path": "/"
+    },
+    {
+        "name": "_ym_d",
+        "value": "1794389470",
+        "domain": ".tiktop-free.com",
+        "path": "/"
+    },
+    {
+        "name": "_ym_uid",
+        "value": "1794389470362125993",
+        "domain": ".tiktop-free.com",
+        "path": "/"
+    },
+    {
+        "name": "wordpress_logged_in_81eb7ba72f92b8bf82458c3e67031723",
+        "value": "sybervault%7C1802165513%7Coj0TDLcPa1RDtjb2N63tqvzDU0zEKH8rX80cmfc3lic%7Cbc3de69dfd76cdc7048b49aa89e2b4eb43e838ad8fc8fa8a902e76fcd7b64fc7",
+        "domain": "tiktop-free.com",
+        "path": "/"
+    }
+]

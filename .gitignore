@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+*.png
+*.jpg
+*.log
+telegram_worker.session-journal

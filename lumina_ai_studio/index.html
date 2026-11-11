@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>LUMINA // Next-Gen AI Video & Creative Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient Spotlight Aura -->
+  <div class="radial-glow" id="mouse-glow"></div>
+  <div class="grid-overlay"></div>
+
+  <!-- Header -->
+  <header class="app-header">
+    <div class="header-inner">
+      <div class="logo-group">
+        <div class="logo-mark">
+          <svg viewBox="0 0 24 24" fill="none" class="logo-svg">
+            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="url(#logo-grad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M2 17L12 22L22 17" stroke="url(#logo-grad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M2 12L12 17L22 12" stroke="url(#logo-grad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+              <linearGradient id="logo-grad" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#38bdf8"/>
+                <stop offset="0.5" stop-color="#818cf8"/>
+                <stop offset="1" stop-color="#c084fc"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-name">LUMINA</span>
+          <span class="logo-badge">STUDIO 2026</span>
+        </div>
+      </div>
+
+      <div class="header-center">
+        <div class="model-badge">
+          <span class="model-dot"></span>
+          <span class="model-name">Flux 1.1 Pro Ultra</span>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <div class="credits-pill">
+          <span class="credit-icon">⚡</span>
+          <span class="credit-val" id="user-credits">250</span>
+          <span class="credit-lbl">Credits</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Workspace -->
+  <main class="studio-container">
+    <!-- Hero Banner -->
+    <section class="studio-hero">
+      <div class="hero-chip">
+        <span class="sparkle">✦</span>
+        <span>Powered by Frontier Diffusion & Motion Synthesis</span>
+      </div>
+      <h1 class="hero-headline">
+        Transform Words Into <br class="mobile-break">
+        <span class="text-shimmer">Hyper-Realistic Visuals</span>
+      </h1>
+      <p class="hero-lead">
+        Synthesize cinematic 8K scenes, fluid motion clips, and concept aesthetics with zero prompt friction.
+      </p>
+    </section>
+
+    <!-- Prompt Generation Workbench (Bento Top) -->
+    <section class="workbench-section">
+      <div class="workbench-card">
+        <div class="workbench-header">
+          <div class="wb-title-group">
+            <span class="wb-icon">✨</span>
+            <span class="wb-title">Prompt Synthesizer</span>
+          </div>
+          <button id="btn-magic-enhance" class="btn-pill-subtle" title="Enhance prompt with cinematic details">
+            <span class="magic-icon">🪄</span>
+            <span>Magic Enhance</span>
+          </button>
+        </div>
+
+        <!-- Prompt Textarea -->
+        <div class="prompt-input-wrapper">
+          <textarea 
+            id="prompt-input" 
+            rows="3" 
+            placeholder="Describe your vision (e.g. 'A futuristic cyberpunk market in Tokyo under rainy neon lights, ultra-detailed 8K reflections, cinematic anamorphic lens...')"
+          >Cyberpunk neon metropolis in rain, flying holographic vehicles, hyper-detailed reflections, cinematic depth of field, 8k render</textarea>
+        </div>
+
+        <!-- Style Chips (Horizontal Scroll on Mobile) -->
+        <div class="style-selector-row">
+          <span class="style-lbl">Aesthetic:</span>
+          <div class="style-pills" id="style-chips-container">
+            <button class="style-chip active" data-style="Cinematic 8K">🎬 Cinematic 8K</button>
+            <button class="style-chip" data-style="Cyberpunk Neon">🌆 Cyberpunk</button>
+            <button class="style-chip" data-style="Studio Anime">🎨 Anime Studio</button>
+            <button class="style-chip" data-style="Hyper Portrait">💎 Hyper Portrait</button>
+            <button class="style-chip" data-style="Surreal Sci-Fi">🪐 Surreal Sci-Fi</button>
+            <button class="style-chip" data-style="3D Unreal 5">🎮 Unreal Engine 5</button>
+          </div>
+        </div>
+
+        <!-- Generation Controls Bottom Bar -->
+        <div class="workbench-footer">
+          <div class="ratios-group">
+            <span class="footer-lbl">Aspect:</span>
+            <div class="ratio-options" id="ratio-selector">
+              <button class="ratio-btn active" data-ratio="16:9" title="16:9 Landscape">
+                <span class="ratio-box ratio-16-9"></span>
+                <span>16:9</span>
+              </button>
+              <button class="ratio-btn" data-ratio="9:16" title="9:16 Vertical Shorts/Reels">
+                <span class="ratio-box ratio-9-16"></span>
+                <span>9:16</span>
+              </button>
+              <button class="ratio-btn" data-ratio="1:1" title="1:1 Square">
+                <span class="ratio-box ratio-1-1"></span>
+                <span>1:1</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="action-group">
+            <button id="btn-generate" class="btn-generate">
+              <span class="gen-icon">✦</span>
+              <span class="gen-text">Generate Scene</span>
+              <span class="gen-cost">5 Credits</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Generation Stage / Preview Canvas -->
+    <section id="stage-section" class="stage-section">
+      <div id="render-stage" class="stage-card">
+        <!-- Idle State -->
+        <div id="stage-idle" class="stage-state">
+          <div class="idle-graphic">
+            <span class="idle-ring"></span>
+            <span class="idle-icon">🖼️</span>
+          </div>
+          <h3 class="stage-title">Canvas Ready</h3>
+          <p class="stage-subtitle">Click "Generate Scene" above to synthesize your high-resolution artwork.</p>
+        </div>
+
+        <!-- Loading State -->
+        <div id="stage-loading" class="stage-state hidden">
+          <div class="shimmer-loader"></div>
+          <div class="loading-content">
+            <div class="spinner-orbital"></div>
+            <h3 class="loading-status" id="loading-status-text">Synthesizing latent diffusion...</h3>
+            <div class="progress-bar-track">
+              <div class="progress-bar-fill" id="progress-fill"></div>
+            </div>
+            <span class="progress-percent" id="progress-percent">0%</span>
+          </div>
+        </div>
+
+        <!-- Result State -->
+        <div id="stage-result" class="stage-state hidden">
+          <div class="result-image-box">
+            <img id="result-img" src="" alt="Generated AI Artwork">
+            <div class="result-floating-overlay">
+              <div class="res-badge" id="res-badge-style">Cinematic 8K</div>
+              <div class="res-badge-model">Flux 1.1 Pro</div>
+            </div>
+          </div>
+          <div class="result-details">
+            <div class="result-prompt-box">
+              <span class="prompt-meta-label">Synthesized Prompt:</span>
+              <p class="result-prompt-text" id="result-prompt-text"></p>
+            </div>
+            <div class="result-actions-bar">
+              <button id="btn-copy-prompt" class="btn-action">
+                <span>📋 Copy Prompt</span>
+              </button>
+              <button id="btn-fullscreen" class="btn-action">
+                <span>🔍 View Fullscreen</span>
+              </button>
+              <button id="btn-download" class="btn-action primary">
+                <span>⬇ Download 4K</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trending Community Creations Feed -->
+    <section class="gallery-section">
+      <div class="gallery-header">
+        <div>
+          <span class="feed-tag">🔥 Trending Community</span>
+          <h2 class="gallery-title">Live Discovery Stream</h2>
+        </div>
+        <div class="feed-filters" id="feed-filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="cinematic">Cinematic</button>
+          <button class="filter-btn" data-filter="cyberpunk">Cyberpunk</button>
+          <button class="filter-btn" data-filter="anime">Anime</button>
+          <button class="filter-btn" data-filter="portrait">Portrait</button>
+        </div>
+      </div>
+
+      <!-- Bento Gallery Grid -->
+      <div class="gallery-grid" id="gallery-grid">
+        <!-- Injected via JavaScript -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Fullscreen Modal Viewer -->
+  <div id="modal-viewer" class="modal-backdrop hidden">
+    <div class="modal-card">
+      <button id="modal-close" class="modal-close-btn">&times;</button>
+      <div class="modal-media-wrapper">
+        <img id="modal-img" src="" alt="Enlarged Artwork">
+      </div>
+      <div class="modal-caption">
+        <p id="modal-prompt"></p>
+        <div class="modal-meta" id="modal-meta"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notification Toast -->
+  <div id="toast" class="toast hidden"></div>
+
+  <footer class="app-footer">
+    <p>⚡ LUMINA AI Creative Engine • Engineered with Linear/Vercel Design Standards</p>
+    <p class="footer-sub">Autonomous Front-End Architecture • Real-Time Vanilla ES6 Engine</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
